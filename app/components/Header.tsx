@@ -4,6 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import Link from "next/link";
 
+
 export default function Header() {
   const [burger, setBurger] = useState(true);
 
