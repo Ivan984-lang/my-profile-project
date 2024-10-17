@@ -7,10 +7,15 @@ import Link from "next/link";
 
 export default function Header() {
   const [burger, setBurger] = useState(true);
+  const [slose, setSlose] = useState(true)
 
   function toggleMenu() {
     setBurger(!burger);
     document.body.classList.toggle("overflow-hidden", !burger);
+  }
+  function slose1() {
+    setBurger(!slose);
+    document.body.classList.toggle("display-none", !slose);
   }
 
   return (
@@ -23,10 +28,10 @@ export default function Header() {
           <>
             <IoMdClose className="burger" onClick={toggleMenu} />
             <div className="burger-menu">
-              <Link href="#home">Home</Link>
-              <Link href="#about">About</Link>
-              <Link href="#project">Project</Link>
-              <Link href="#contact">Contact</Link>
+              <Link href="#home" onClick={slose1}>Home</Link>
+              <Link href="#about" onClick={slose1}>About</Link>
+              <Link href="#project" onClick={slose1} >Project</Link>
+              <Link href="#contact" onClick={slose1}>Contact</Link>
             </div>
           </>
         )}
