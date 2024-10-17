@@ -14,7 +14,7 @@ export default function Header() {
     document.body.classList.toggle("overflow-hidden", !burger);
   }
   function slose1() {
-    setBurger(!slose);
+    setSlose(!slose);
     document.body.classList.toggle("display-none", !slose);
   }
 
@@ -27,7 +27,7 @@ export default function Header() {
         ) : (
           <>
             <IoMdClose className="burger" onClick={toggleMenu} />
-            <div className="burger-menu">
+            <div className="burger-menu" onClick={slose1}>
               <Link href="#home" onClick={slose1}>Home</Link>
               <Link href="#about" onClick={slose1}>About</Link>
               <Link href="#project" onClick={slose1} >Project</Link>
